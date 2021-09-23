@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/mb_memoire.iml" filepath="$PROJECT_DIR$/.idea/mb_memoire.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_authentification/ms_authentification.iml" filepath="$PROJECT_DIR$/ms_authentification/ms_authentification.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_gestion_des_biens_et_projets/ms_gestion_des_biens_et_projets.iml" filepath="$PROJECT_DIR$/ms_gestion_des_biens_et_projets/ms_gestion_des_biens_et_projets.iml" />
+    </modules>
+  </component>
+</project>

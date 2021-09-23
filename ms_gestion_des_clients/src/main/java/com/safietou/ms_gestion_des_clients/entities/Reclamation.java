@@ -18,7 +18,9 @@ public class Reclamation {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idReclamation;
     private String commentaire;
-    @JsonIgnore
+    //@JsonIgnore
     @ManyToOne
     private Etat etat;
+    @ManyToOne
+    private Contrat contrat;
 }

@@ -54,6 +54,11 @@ public class ServiceBienImmoImm implements ServiceBienImmoProjet {
     }
 
     @Override
+    public BienImmobiliere getBienImmobiliereParNomBien(String nomBien) {
+        return bienImmobiliereRepository.findByNomBienContains(nomBien );
+    }
+
+    @Override
     public Projet addNewProjet(Projet projet) {
         return projetRepository.save(projet);
     }

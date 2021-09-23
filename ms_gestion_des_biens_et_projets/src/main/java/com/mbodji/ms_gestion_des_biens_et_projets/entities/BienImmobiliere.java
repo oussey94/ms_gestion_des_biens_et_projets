@@ -1,6 +1,6 @@
 package com.mbodji.ms_gestion_des_biens_et_projets.entities;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
+//import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -22,14 +22,15 @@ public class BienImmobiliere {
     private Boolean available;
     private String photoName;
     private double prix;
+    private int rating;
     private String localisation;
     private Boolean selected;
     private double taille;
     private String description;
-    @JsonIgnore
+    //@JsonIgnore
     @ManyToOne
     private Categorie categorie;
-    @JsonIgnore
+    //@JsonIgnore
     @ManyToOne
     private Projet projet;
 }

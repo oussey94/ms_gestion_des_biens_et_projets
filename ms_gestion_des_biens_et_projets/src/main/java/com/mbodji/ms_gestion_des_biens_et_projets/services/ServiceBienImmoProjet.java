@@ -14,6 +14,7 @@ public interface ServiceBienImmoProjet {
     void deleteBienImmoParId(Long id);
     BienImmobiliere getBienImmobiliereParId(Long id);
     List<BienImmobiliere> getAllBienImmo();
+    BienImmobiliere getBienImmobiliereParNomBien(String nomBien);
 
 
     Projet addNewProjet(Projet projet);

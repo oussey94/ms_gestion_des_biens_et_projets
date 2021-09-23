@@ -1,6 +1,8 @@
 package com.safietou.ms_gestion_des_clients.controllers;
 
+import com.safietou.ms_gestion_des_clients.beans.ClientBean;
 import com.safietou.ms_gestion_des_clients.entities.Contrat;
+import com.safietou.ms_gestion_des_clients.feign.ClientRestFeignClient;
 import com.safietou.ms_gestion_des_clients.services.ServiceGestionClient;
 import org.springframework.web.bind.annotation.*;
 
@@ -11,9 +13,11 @@ import java.util.List;
 @CrossOrigin("*")
 public class ContratRestController {
     private ServiceGestionClient serviceGestionClient;
+    private ClientRestFeignClient clientRestFeignClient;
 
-    public ContratRestController(ServiceGestionClient serviceGestionClient) {
+    public ContratRestController(ServiceGestionClient serviceGestionClient, ClientRestFeignClient clientRestFeignClient) {
         this.serviceGestionClient = serviceGestionClient;
+        this.clientRestFeignClient = clientRestFeignClient;
     }
     @GetMapping
     public List<Contrat> getAllCont(){
@@ -22,7 +26,11 @@ public class ContratRestController {
 
     @GetMapping("/{id}")
     public Contrat getContratById(@PathVariable("id") Long id){
-        return serviceGestionClient.getContrat(id);
+        Contrat contrat= serviceGestionClient.getContrat(id);
+        ClientBean clientBean= clientRestFeignClient.getClient(contrat.getClientID());
+
+        contrat.setClientBean(clientBean);
+        return contrat;
     }
     @PostMapping
     public Contrat createContrat(@RequestBody Contrat contrat){

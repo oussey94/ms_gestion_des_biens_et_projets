@@ -1,0 +1,64 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Spring Boot-ConfigServiceApplication<config-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ousseynou.configservice.ConfigServiceApplication",
+            "projectName": "config-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-DiscoveryServiceApplication<discovery-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ousseynou.discoveryservice.DiscoveryServiceApplication",
+            "projectName": "discovery-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-GatewayServiceApplication<gateway-service>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.ousseynou.gatewayservice.GatewayServiceApplication",
+            "projectName": "gateway-service",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsGestionDesBiensEtProjetsApplication<ms_gestion_des_biens_et_projets>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.mbodji.ms_gestion_des_biens_et_projets.MsGestionDesBiensEtProjetsApplication",
+            "projectName": "ms_gestion_des_biens_et_projets",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsGestionDesUtilisateursApplication<ms-gestion-des-utilisateurs>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.oussey.msgestiondesutilisateurs.MsGestionDesUtilisateursApplication",
+            "projectName": "ms-gestion-des-utilisateurs",
+            "args": ""
+        },
+        {
+            "type": "java",
+            "name": "Spring Boot-MsGestionDesClientsApplication<ms_gestion_des_clients>",
+            "request": "launch",
+            "cwd": "${workspaceFolder}",
+            "console": "internalConsole",
+            "mainClass": "com.safietou.ms_gestion_des_clients.MsGestionDesClientsApplication",
+            "projectName": "ms_gestion_des_clients",
+            "args": ""
+        }
+    ]
+}
