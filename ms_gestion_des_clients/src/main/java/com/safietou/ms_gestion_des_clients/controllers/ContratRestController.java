@@ -1,7 +1,9 @@
 package com.safietou.ms_gestion_des_clients.controllers;
 
+import com.safietou.ms_gestion_des_clients.beans.BienImmobiliereBean;
 import com.safietou.ms_gestion_des_clients.beans.ClientBean;
 import com.safietou.ms_gestion_des_clients.entities.Contrat;
+import com.safietou.ms_gestion_des_clients.feign.BienImmobiliereRestClient;
 import com.safietou.ms_gestion_des_clients.feign.ClientRestFeignClient;
 import com.safietou.ms_gestion_des_clients.services.ServiceGestionClient;
 import org.springframework.web.bind.annotation.*;
@@ -13,10 +15,12 @@ import java.util.List;
 @CrossOrigin("*")
 public class ContratRestController {
     private ServiceGestionClient serviceGestionClient;
+    private BienImmobiliereRestClient bienImmobiliereRestClient;
     private ClientRestFeignClient clientRestFeignClient;
 
-    public ContratRestController(ServiceGestionClient serviceGestionClient, ClientRestFeignClient clientRestFeignClient) {
+    public ContratRestController(ServiceGestionClient serviceGestionClient, BienImmobiliereRestClient bienImmobiliereRestClient, ClientRestFeignClient clientRestFeignClient) {
         this.serviceGestionClient = serviceGestionClient;
+        this.bienImmobiliereRestClient = bienImmobiliereRestClient;
         this.clientRestFeignClient = clientRestFeignClient;
     }
     @GetMapping
@@ -27,8 +31,10 @@ public class ContratRestController {
     @GetMapping("/{id}")
     public Contrat getContratById(@PathVariable("id") Long id){
         Contrat contrat= serviceGestionClient.getContrat(id);
+        BienImmobiliereBean bienImmobiliereBean=bienImmobiliereRestClient.getById(contrat.getBienImmobiliereID());
         ClientBean clientBean= clientRestFeignClient.getClient(contrat.getClientID());
 
+        contrat.setBienImmobiliereBean(bienImmobiliereBean);
         contrat.setClientBean(clientBean);
         return contrat;
     }

@@ -21,6 +21,7 @@ public interface ServiceGestionClient {
     void deleteEtat(Etat etat);
     Etat getEtat(Long id);
     List<Etat> getAllEtat();
+    Etat getEtatParNomEtat(String nomEtat);
 
     Reclamation addNewReclamation(Reclamation reclamation);
     Reclamation updateReclamation(Reclamation reclamation);

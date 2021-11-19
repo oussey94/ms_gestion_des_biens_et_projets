@@ -4,6 +4,7 @@ import com.oussey.msgestiondesutilisateurs.entities.Client;
 import com.oussey.msgestiondesutilisateurs.entities.Proprietaire;
 import com.oussey.msgestiondesutilisateurs.entities.T_role;
 import com.oussey.msgestiondesutilisateurs.entities.T_user;
+import com.oussey.msgestiondesutilisateurs.entities.*;
 import com.oussey.msgestiondesutilisateurs.services.ClientService;
 import com.oussey.msgestiondesutilisateurs.services.ProprietaireService;
 import com.oussey.msgestiondesutilisateurs.services.UserService;
@@ -32,6 +33,7 @@ public class MsGestionDesUtilisateursApplication implements CommandLineRunner {
     @Override
     public void run(String... args) throws Exception {
 
+
         userService.addNewRole(new T_role(null,"ADMIN"));
         userService.addNewRole(new T_role(null,"USER"));
 
@@ -52,6 +54,7 @@ public class MsGestionDesUtilisateursApplication implements CommandLineRunner {
         userService.addRoleToUser("ouss94","USER");
         userService.addRoleToUser("amy96","USER");
         userService.addRoleToUser("saf94","ADMIN");
+
 
     }
 }

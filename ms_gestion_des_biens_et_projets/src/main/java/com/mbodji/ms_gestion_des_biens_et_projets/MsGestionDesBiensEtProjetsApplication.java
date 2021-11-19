@@ -26,7 +26,7 @@ public class MsGestionDesBiensEtProjetsApplication implements CommandLineRunner 
 
     @Override
     public void run(String... args) throws Exception {
-
+/*
         Categorie c1=serviceBienImmoProjet.addNewCategorie(new Categorie(null,"Immeuble",new ArrayList<>()));
         Categorie c2=serviceBienImmoProjet.addNewCategorie(new Categorie(null,"Appartement",new ArrayList<>()));
         Categorie c3=serviceBienImmoProjet.addNewCategorie(new Categorie(null,"Magasin",new ArrayList<>()));
@@ -44,6 +44,6 @@ public class MsGestionDesBiensEtProjetsApplication implements CommandLineRunner 
 
         serviceBienImmoProjet.addNewBienImmo(new BienImmobiliere(null,"immeuble safie",true,"window.jpg",6000000,1,"Ngaparou",false,300,"c'est un immeuble",c2, p3));
         serviceBienImmoProjet.addNewBienImmo(new BienImmobiliere(null,"chez Amy",false,"the-interior.jpg",3000000,5,"Somone",true,600,"c'est un immeuble",c3, p2));
-
+*/
     }
 }

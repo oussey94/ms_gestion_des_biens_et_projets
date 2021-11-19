@@ -46,7 +46,7 @@ public class UserController {
         return userService.addNewUser(t_user);
     }
 
-    @GetMapping("/{userName}")
+    @GetMapping(path ="/login/{userName}")
     public T_user getUserByUsername(@PathVariable("userName") String userName){
         return userService.findParUserName(userName);
     }

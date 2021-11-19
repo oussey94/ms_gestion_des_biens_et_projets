@@ -52,16 +52,16 @@ public class MsGestionDesClientsApplication implements CommandLineRunner {
         System.out.println(client.getPrenom());
         System.out.println(client.getAdresse());
         System.out.println(client.getVille());
+/*
+        Contrat c1=serviceGestionClient.addNewContrat(new Contrat(null,1200000,120000,new Date(),6,"pour location",bienImmobiliere.getIdBienImmo(),client.getIdUser(),new ArrayList<>(),bienImmobiliere, client));
+        Contrat c2=serviceGestionClient.addNewContrat(new Contrat(null,8700000,270000,new Date(),12,"pour location",bienImmobiliere.getIdBienImmo(),client.getIdUser(),new ArrayList<>(),bienImmobiliere, client));
 
-        Contrat c1=serviceGestionClient.addNewContrat(new Contrat(null,1200000,120000,new Date(),6,"pour location",client.getIdUser(),new ArrayList<>(),new ArrayList<>(), null));
-        Contrat c2=serviceGestionClient.addNewContrat(new Contrat(null,8700000,270000,new Date(),12,"pour location",client.getIdUser(),new ArrayList<>(),new ArrayList<>(), null));
+        serviceGestionClient.addNewContrat(new Contrat(null,8700000,270000,new Date(),12,"pour location",bienImmobiliere.getIdBienImmo(),client.getIdUser(),new ArrayList<>(),bienImmobiliere, client));
+        serviceGestionClient.addNewContrat(new Contrat(null,8700000,270000,new Date(),12,"pour location",bienImmobiliere.getIdBienImmo(),client.getIdUser(),new ArrayList<>(),bienImmobiliere, client));
 
-        serviceGestionClient.addNewContrat(new Contrat(null,8700000,270000,new Date(),12,"pour location",client.getIdUser(),new ArrayList<>(),new ArrayList<>(), null));
-        serviceGestionClient.addNewContrat(new Contrat(null,8700000,270000,new Date(),12,"pour location",client.getIdUser(),new ArrayList<>(),new ArrayList<>(), null));
-
-        serviceGestionClient.addNewVisite(new Visite(null,new Date(),LocalTime.of(12,11,56),c2, bienImmobiliere.getIdBienImmo(), client.getIdUser(), null, null));
-        serviceGestionClient.addNewVisite(new Visite(null,new Date(),LocalTime.of(2,2,2),c1, bienImmobiliere.getIdBienImmo(), client.getIdUser(), null, null));
-        serviceGestionClient.addNewVisite(new Visite(null,new Date(),LocalTime.of(5,5,5),c2, bienImmobiliere.getIdBienImmo(), client.getIdUser(), null, null));
+        serviceGestionClient.addNewVisite(new Visite(null,new Date(),LocalTime.of(12,11,56), bienImmobiliere.getIdBienImmo(), client.getIdUser(), bienImmobiliere, client));
+        serviceGestionClient.addNewVisite(new Visite(null,new Date(),LocalTime.of(2,2,2), bienImmobiliere.getIdBienImmo(), client.getIdUser(), bienImmobiliere, client));
+        serviceGestionClient.addNewVisite(new Visite(null,new Date(),LocalTime.of(5,5,5), bienImmobiliere.getIdBienImmo(), client.getIdUser(), bienImmobiliere, client));
 
         Etat e1=serviceGestionClient.addNewEtat(new Etat(null,"satisfait", new ArrayList<>()));
         Etat e2=serviceGestionClient.addNewEtat(new Etat(null,"en cours", new ArrayList<>()));
@@ -69,6 +69,6 @@ public class MsGestionDesClientsApplication implements CommandLineRunner {
         serviceGestionClient.addNewReclamation(new Reclamation(null,"lababo en panne",e2,c2));
         serviceGestionClient.addNewReclamation(new Reclamation(null,"l'eau ne monte pas",e1,c1));
 
-
+*/
     }
 }

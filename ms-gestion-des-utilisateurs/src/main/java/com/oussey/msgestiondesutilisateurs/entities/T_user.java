@@ -29,7 +29,6 @@ public class T_user {
     private String adresse;
     private int age;
     private String ville;
-    @JsonIgnore
     @ManyToMany(fetch = FetchType.EAGER)
     private Collection<T_role> troles;
 

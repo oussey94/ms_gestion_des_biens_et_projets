@@ -91,6 +91,11 @@ public class ServiceGestionClientImm implements ServiceGestionClient{
     }
 
     @Override
+    public Etat getEtatParNomEtat(String nomEtat) {
+        return etatRepository.findByNomEtat(nomEtat);
+    }
+
+    @Override
     public Reclamation addNewReclamation(Reclamation reclamation) {
         return reclamationRepository.save(reclamation);
     }

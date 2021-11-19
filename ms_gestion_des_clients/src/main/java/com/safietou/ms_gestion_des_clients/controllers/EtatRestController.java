@@ -23,6 +23,11 @@ public class EtatRestController {
     public Etat getEtat(@PathVariable("id") Long id){
         return serviceGestionClient.getEtat(id);
     }
+
+    @GetMapping(path="/nom/{nomEtat}")
+    public Etat getByName(@PathVariable("nomEtat") String nomEtat){
+        return serviceGestionClient.getEtatParNomEtat(nomEtat);
+    }
     @PostMapping
     public Etat createEtat(@RequestBody Etat etat){
         return serviceGestionClient.addNewEtat(etat);

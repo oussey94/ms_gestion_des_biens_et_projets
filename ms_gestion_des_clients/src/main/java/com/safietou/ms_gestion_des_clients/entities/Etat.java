@@ -20,6 +20,6 @@ public class Etat {
     private Long idEtat;
     private String nomEtat;
     @JsonIgnore
-    @OneToMany(mappedBy = "etat")
+    @OneToMany(fetch = FetchType.EAGER, cascade = CascadeType.ALL, mappedBy = "etat")
     private Collection<Reclamation> reclamations;
 }

@@ -28,8 +28,8 @@ public class Visite {
     private LocalTime heureVisite;
     //private String demanderVisite;
     //@JsonIgnore
-    @ManyToOne
-    private Contrat contrat;
+    //@ManyToOne
+    //private Contrat contrat;
     private Long bienImmobiliereID;
     private Long clientID;
     @Transient
